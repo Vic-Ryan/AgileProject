@@ -74,5 +74,21 @@ namespace AgileUser.Services
                     };
             }
         }
+
+        public bool UpdateUser(UserEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                    .Users
+                    .Single(e => e.CharacterId == model.CharacterId && e.OwnerId == _userId);
+
+                entity.Name = model.Name;
+                entity.PreferredClass = model.PreferredClass;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
 }

@@ -46,5 +46,18 @@ namespace AgileProject.WebApi.Controllers
             var user = userService.GetUserById(id);
             return Ok(user);
         }
+
+        public IHttpActionResult Put(UserEdit user)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var service = CreateUserService();
+
+            if (!service.UpdateUser(user))
+                return InternalServerError();
+
+            return Ok();
+        }
     }
 }
