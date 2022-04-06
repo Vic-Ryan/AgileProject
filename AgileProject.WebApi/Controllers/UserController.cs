@@ -39,5 +39,12 @@ namespace AgileProject.WebApi.Controllers
 
             return Ok();
         }
+
+        public IHttpActionResult Get(int id)
+        {
+            UserService userService = CreateUserService();
+            var user = userService.GetUserById(id);
+            return Ok(user);
+        }
     }
 }

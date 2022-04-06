@@ -55,5 +55,24 @@ namespace AgileUser.Services
                 return query.ToArray();
             }
         }
+
+        public UserDetail GetUserById(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity = ctx
+                    .Users
+                    .Single(e => e.CharacterId == id && e.OwnerId == _userId);
+                return
+                    new UserDetail
+                    {
+                        CharacterId = entity.CharacterId,
+                        Name = entity.Name,
+                        PreferredClass = entity.PreferredClass,
+                        PastGames = entity.PastGames,
+                        IsBanned = entity.IsBanned
+                    };
+            }
+        }
     }
 }
