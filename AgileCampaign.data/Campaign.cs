@@ -13,6 +13,8 @@ namespace AgileCampaign.data
         public int GameId { get; set; }
 
         [Required]
+        public string GameName { get; set; }
+        [Required]
         public int SessionLength { get; set; }
         [Required]
         public int NumPlayers { get; set; }

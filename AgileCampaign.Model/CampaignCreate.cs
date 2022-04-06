@@ -10,6 +10,10 @@ namespace AgileCampaign.Model
     public class CampaignCreate
     {
         [Required]
+        [MinLength(2, ErrorMessage = "You should have a name already in mind thats longer then 2 characters!")]
+        [MaxLength(30, ErrorMessage = "Thats to much, save some for the description!")]
+        public string GameName { get; set; }
+        [Required]
         [MinLength(3, ErrorMessage ="Give players a good type: Gritty, Rule of cool, Water World, Module:WaterDeep, ext")]
         [MaxLength(30, ErrorMessage ="Ruel of thumb for type: Keep It Simple Silly")]
         public string GameType { get; set; }
