@@ -207,7 +207,9 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CampaignController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -307,6 +309,20 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AgileUser.Data\AgileUser.Data.csproj">
+      <Project>{35ec3161-8d20-42b9-b430-85c86a0a2f8f}</Project>
+      <Name>AgileUser.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AgileUser.Models\AgileUser.Models.csproj">
+      <Project>{298804e6-8348-406d-be4b-5871e1e8d73b}</Project>
+      <Name>AgileUser.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AgileUser.Services\AgileUser.Services.csproj">
+      <Project>{c95ed35e-33b0-4ab2-ada5-14cbd4a12f34}</Project>
+      <Name>AgileUser.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
