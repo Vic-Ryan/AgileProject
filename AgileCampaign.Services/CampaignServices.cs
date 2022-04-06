@@ -8,5 +8,11 @@ namespace AgileCampaign.Services
 {
     public class CampaignServices
     {
+        private readonly Guid _userId;
+        public CampaignServices(Guid userId)
+        {
+            _userId = userId;
+        }
+
     }
 }
