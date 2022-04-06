@@ -40,9 +40,18 @@ namespace AgileCampaign.Services
             {
                 var query = ctx
                                .Campaign
-                               .Where(e)
+                               .Where(e => e.OwnerId == _userId)
+                               .Select(e => new CampaignListItem()
+                               {
+                                   GameId = e.GameId,
+                                   GameName = e.GameName,
+                                   GameType = e.GameType,
+                                   NumPlayers = e.NumPlayers,
+                                   CreatedUtc = e.CreatedUtc
+                               });
+                return query.ToArray();
             }
-
         }
+
     }
 }
