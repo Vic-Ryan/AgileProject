@@ -13,7 +13,7 @@ namespace AgileProject.WebApi.Models
         {
             // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType
             var userIdentity = await manager.CreateIdentityAsync(this, authenticationType);
-            // Add custom user claims here
+            // Add custom user claims here hello :)
             return userIdentity;
         }
     }
