@@ -3,21 +3,22 @@ using System.Data.Entity.ModelConfiguration;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using AgileCampaign.data;
+using AgileMod.Data;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
-using Microsoft.AspNet.Identity.Owin;
+//using Microsoft.AspNet.Identity.Owin;
 
-namespace AgileUser.Data
+namespace AgileMod.Models
 {
-    // You can add profile data for the user by adding more properties to your ApplicationUser class, please visit https://go.microsoft.com/fwlink/?LinkID=317594 to learn more.
     public class ApplicationUser : IdentityUser
     {
+        // You can add profile data for the user by adding more properties to your ApplicationUser class, please visit https://go.microsoft.com/fwlink/?LinkID=317594 to learn more.
+
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager, string authenticationType)
         {
             // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType
             var userIdentity = await manager.CreateIdentityAsync(this, authenticationType);
-            // Add custom user claims here hello :)
+            // Add custom user claims here
             return userIdentity;
         }
     }
@@ -28,14 +29,12 @@ namespace AgileUser.Data
             : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
-        
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
         }
-
-        public DbSet<User> Users { get; set; }
-        public DbSet<Campaign> Campaign { get; set; }
+        public DbSet<Mod> Mods { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder
@@ -48,7 +47,6 @@ namespace AgileUser.Data
                 .Add(new IdentityUserRoleConfiguration());
         }
     }
-
     public class IdentityUserLoginConfiguration : EntityTypeConfiguration<IdentityUserLogin>
     {
         public IdentityUserLoginConfiguration()
@@ -56,12 +54,11 @@ namespace AgileUser.Data
             HasKey(iul => iul.UserId);
         }
     }
-
     public class IdentityUserRoleConfiguration : EntityTypeConfiguration<IdentityUserRole>
     {
         public IdentityUserRoleConfiguration()
         {
-            HasKey(iur => iur.UserId);
+            HasKey(iul => iul.UserId);
         }
     }
 }
