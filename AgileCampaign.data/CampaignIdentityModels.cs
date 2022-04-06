@@ -8,7 +8,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 
-namespace AgileUser.Data
+namespace AgileProject.WebApi.Models
 {
     // You can add profile data for the user by adding more properties to your ApplicationUser class, please visit https://go.microsoft.com/fwlink/?LinkID=317594 to learn more.
     public class ApplicationUser : IdentityUser
@@ -17,7 +17,7 @@ namespace AgileUser.Data
         {
             // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType
             var userIdentity = await manager.CreateIdentityAsync(this, authenticationType);
-            // Add custom user claims here hello :)
+            // Add custom user claims here
             return userIdentity;
         }
     }
@@ -34,7 +34,6 @@ namespace AgileUser.Data
             return new ApplicationDbContext();
         }
 
-        public DbSet<User> Users { get; set; }
         public DbSet<Campaign> Campaign { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
