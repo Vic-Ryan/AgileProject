@@ -35,6 +35,7 @@ namespace AgileUser.Data
         }
 
         public DbSet<User> Users { get; set; }
+        public DbSet<Campaign> Campaign { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder
