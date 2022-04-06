@@ -82,6 +82,12 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AgileMod.Data\AgileMod.Data.csproj">
+      <Project>{27AF1283-DD0E-481F-AF26-BDD07A7EA06E}</Project>
+      <Name>AgileMod.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
