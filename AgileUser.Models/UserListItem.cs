@@ -10,5 +10,6 @@ namespace AgileUser.Models
     {
         public int CharacterId { get; set; }
         public string Name { get; set; }
+        public string PreferredClass { get; set; }
     }
 }

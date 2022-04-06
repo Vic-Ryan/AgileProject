@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AgileUser.Models
 {
-    public class NoteCreate
+    public class UserCreate
     {
         [Required]
         public string Name { get; set; }
