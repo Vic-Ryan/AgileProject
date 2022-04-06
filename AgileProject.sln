@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgileUser.Services", "Agile
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgileMod.Data", "AgileMod.Data\AgileMod.Data.csproj", "{27AF1283-DD0E-481F-AF26-BDD07A7EA06E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgileMod.Services", "AgileMod.Services\AgileMod.Services.csproj", "{EB0BF7C3-C2EC-4ACC-A41F-20CBB9CEC447}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgileMod.Models", "AgileMod.Models\AgileMod.Models.csproj", "{9D7B7AFF-815B-4F4A-9C2B-7164474CECA7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{27AF1283-DD0E-481F-AF26-BDD07A7EA06E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27AF1283-DD0E-481F-AF26-BDD07A7EA06E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27AF1283-DD0E-481F-AF26-BDD07A7EA06E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB0BF7C3-C2EC-4ACC-A41F-20CBB9CEC447}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB0BF7C3-C2EC-4ACC-A41F-20CBB9CEC447}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB0BF7C3-C2EC-4ACC-A41F-20CBB9CEC447}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB0BF7C3-C2EC-4ACC-A41F-20CBB9CEC447}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D7B7AFF-815B-4F4A-9C2B-7164474CECA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D7B7AFF-815B-4F4A-9C2B-7164474CECA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D7B7AFF-815B-4F4A-9C2B-7164474CECA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D7B7AFF-815B-4F4A-9C2B-7164474CECA7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
