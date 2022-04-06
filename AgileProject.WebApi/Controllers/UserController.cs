@@ -1,4 +1,5 @@
-﻿using AgileUser.Models;
+﻿using AgileUser.Data;
+using AgileUser.Models;
 using AgileUser.Services;
 using Microsoft.AspNet.Identity;
 using System;
@@ -45,6 +46,14 @@ namespace AgileProject.WebApi.Controllers
             UserService userService = CreateUserService();
             var user = userService.GetUserById(id);
             return Ok(user);
+        }
+
+        public IHttpActionResult GetAll()
+        {
+            UserService userService = CreateUserService();
+            User users = (User)userService.GetUsers();
+            List<User> listOfUsers = new List<User>();
+            return Ok(listOfUsers);
         }
 
         public IHttpActionResult Put(UserEdit user)
