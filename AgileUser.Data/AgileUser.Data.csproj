@@ -96,5 +96,11 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AgileCampaign.data\AgileCampaign.data.csproj">
+      <Project>{4F1F2BE4-BDC4-4846-826A-9DA8DC84D0A3}</Project>
+      <Name>AgileCampaign.data</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
